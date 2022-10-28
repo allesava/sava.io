@@ -1,0 +1,23 @@
+// Spacing
+$gap: 4rem;
+
+// Grid
+$col-nr: 3;
+$radius: 3px;
+
+// Colors
+$c-bg: hsl(0, 0%, 99%);
+$c-bg-dark: darken($c-bg, 10%);
+$c-bg-darker: darken($c-bg, 30%);
+$c-bg-darkest: darken($c-bg, 60%);
+
+// RWD Breakpoints
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 768px;
+
+// Starfield
+$stars: 30; // stars per layer
+$depth: 60; // depth between star layers
+$speed: 3s; // transition between layers
+$width: 1920;
+$height: 1440;

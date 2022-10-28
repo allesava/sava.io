@@ -1,0 +1,90 @@
+/*! Version 20.08.01 */
+@font-face {
+  font-family: 'W95FA';
+  src: url("../fonts/W95FA.woff2") format("woff2"), url("../fonts/W95FA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+html {
+  font-size: 22px; }
+
+body {
+  font-family: "neue-haas-unica", system-ui, sans-serif;
+  color: #171717;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background: white;
+  font-feature-settings: "tnum"; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "neue-haas-unica", system-ui, sans-serif; }
+
+#Page {
+  max-width: 800px;
+  margin: 0 auto; }
+
+::selection {
+  color: white;
+  background: #171717; }
+
+a, .pixel, ol > li::before {
+  text-decoration-line: none;
+  color: #171717;
+  font-family: "W95FA", "neue-haas-unica", system-ui, sans-serif;
+  font-size: 20px; }
+
+h1, h2, h3 {
+  color: #171717;
+  line-height: 1.3;
+  font-size: 1rem; }
+
+h2, h3 {
+  border-bottom: 2px solid #171717;
+  display: inline-block;
+  margin: 2rem 0 1rem; }
+
+p {
+  margin: 0 0 2rem; }
+
+ol {
+  text-align: left;
+  counter-reset: a;
+  padding-left: 2rem;
+  margin: 1rem 0; }
+  ol > li {
+    position: relative;
+    margin: 0 0 4rem 1rem;
+    list-style: none; }
+    ol > li::before {
+      content: counter(a);
+      counter-increment: a 1;
+      position: absolute;
+      top: 6px;
+      left: -3rem;
+      width: 1.2rem;
+      height: 1.2rem; }
+
+header {
+  position: relative;
+  padding: 4rem 0 2rem;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 50px 1fr auto;
+  grid-gap: 1rem; }
+  header svg {
+    width: 48px;
+    height: 48px; }
+
+section {
+  margin: 0 0 4rem; }
+
+footer {
+  padding: 4rem 0; }

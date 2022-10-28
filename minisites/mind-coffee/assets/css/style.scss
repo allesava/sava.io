@@ -1,0 +1,117 @@
+/*! Version 20.08.01 */
+@import "variables";
+
+@font-face {
+    font-family: 'W95FA';
+    src: url('../fonts/W95FA.woff2') format('woff2'),
+    url('../fonts/W95FA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: $font-size;
+}
+
+body {
+    font-family: $font;
+    color: $c-text;
+    font-size: 1rem;
+    line-height: $line-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    background: $c-bg;
+    font-feature-settings: "tnum";
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: $font;
+}
+
+#Page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+::selection {
+    color: $c-bg;
+    background: $c-text;
+}
+
+a, .pixel {
+    text-decoration-line: none;
+    //text-decoration-style: wavy;
+    //text-decoration-color: hsla(0, 0%, 0%, 0.1);
+    color: $c-text;
+    font-family: $font-pixel;
+    font-size: 20px;
+}
+
+h1, h2, h3 {
+    color: $c-text;
+    line-height: 1.3;
+    font-size: 1rem;
+}
+
+h2, h3 {
+    border-bottom: 2px solid $c-text;
+    display: inline-block;
+    margin: $gap/2 0 $gap/4;
+}
+
+p {
+    margin: 0 0 $gap/2;
+}
+
+ol {
+    text-align: left;
+    counter-reset: a;
+    padding-left: 2rem;
+    margin: 1rem 0;
+
+    > li {
+        position: relative;
+        margin: 0 0 $gap 1rem;
+        list-style: none;
+
+        &::before {
+            @extend .pixel;
+            content: counter(a);
+            counter-increment: a 1;
+            position: absolute;
+            top: 6px;
+            left: -3rem;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}
+
+header {
+    position: relative;
+    padding: $gap 0 $gap/2;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 50px 1fr auto;
+    grid-gap: $gap/4;
+
+    svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+section {
+    margin: 0 0 $gap;
+}
+
+footer {
+    padding: $gap 0;
+}

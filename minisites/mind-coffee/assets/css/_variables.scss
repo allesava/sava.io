@@ -1,0 +1,18 @@
+// Typography
+$font: 'neue-haas-unica', system-ui, sans-serif;
+$font-pixel: 'W95FA', $font;
+$font-size: 22px;
+$line-height: 1.5;
+
+// Spacing
+$gap: 4rem;
+
+// Colors
+$c-text: hsl(0, 0%, 9%);
+$c-bg: hsl(0, 0%, 100%);
+
+// RWD Breakpoints
+//$breakpoint-desktop: 1200px;
+//$breakpoint-tablet: 1199px;
+//$breakpoint-mobile: 860px;
+//$breakpoint-small: 480px;
