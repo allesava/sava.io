@@ -1,4 +1,4 @@
-/*! Version 22.11.08a */
+/*! Version 22.11.08b */
 // let projects = document.getElementById('projects');
 // let closeProjects = document.getElementById('closeProjects');
 
@@ -13,6 +13,9 @@ let closeWork = document.getElementById('closeWork');
 let privacy = document.getElementById('privacy');
 let linkPrivacy = document.getElementById('linkPrivacy');
 let closePrivacy = document.getElementById('closePrivacy');
+
+let introContent = document.getElementById('introContent');
+let closeIntro = document.getElementById('closeIntro');
 
 closeIntro.onclick = function () {
     toggleIntro();
