@@ -1,6 +1,4 @@
-/*! Version 22.11.08b */
-// let projects = document.getElementById('projects');
-// let closeProjects = document.getElementById('closeProjects');
+/*! Version 22.11.08c */
 
 let about = document.getElementById('about');
 let linkAbout = document.getElementById('linkAbout');

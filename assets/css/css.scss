@@ -1,4 +1,4 @@
-/*! Version 22.11.08b */
+/*! Version 22.11.08c */
 @use "sass:math";
 @import "variables";
 
@@ -362,7 +362,6 @@ ol {
 	left: 50%;
 	transform: translate(-50%, 0);
 	width: 460px;
-	padding: 40px 0 0;
 
 	a {
 		display: inline-block;
@@ -422,12 +421,6 @@ ol {
 		padding: math.div($gap, 4);
 		overflow-y: auto;
 		max-height: calc(100vh - 240px);
-	}
-}
-
-#work {
-	.info {
-		margin-top: math.div($gap, 2);
 	}
 }
 
