@@ -1,4 +1,4 @@
-/*! Version 22.10.28a */
+/*! Version 22.11.08a */
 // let projects = document.getElementById('projects');
 // let closeProjects = document.getElementById('closeProjects');
 
@@ -9,10 +9,6 @@ let closeAbout = document.getElementById('closeAbout');
 let work = document.getElementById('work');
 let linkWork = document.getElementById('linkWork');
 let closeWork = document.getElementById('closeWork');
-
-let imprint = document.getElementById('imprint');
-let linkImprint = document.getElementById('linkImprint');
-let closeImprint = document.getElementById('closeImprint');
 
 let privacy = document.getElementById('privacy');
 let linkPrivacy = document.getElementById('linkPrivacy');
@@ -42,11 +38,6 @@ linkWork.onclick = function () {
     displayWork();
 }
 
-linkImprint.onclick = function () {
-    displayImprint();
-    linkImprint.classList.toggle('active');
-}
-
 linkPrivacy.onclick = function () {
     displayPrivacy();
     linkPrivacy.classList.toggle('active');
@@ -60,11 +51,6 @@ closeWork.onclick = function () {
     hideWork();
 }
 
-closeImprint.onclick = function () {
-    hideImprint();
-    linkImprint.classList.remove('active');
-}
-
 closePrivacy.onclick = function () {
     hidePrivacy();
     linkPrivacy.classList.remove('active');
@@ -76,8 +62,6 @@ function displayAbout() {
 
     work.classList.remove('inUp');
     work.classList.add('outUp');
-    imprint.classList.remove('inUp');
-    imprint.classList.add('outUp');
     privacy.classList.remove('inUp');
     privacy.classList.add('outUp');
 }
@@ -88,20 +72,6 @@ function displayWork() {
 
     about.classList.remove('inUp');
     about.classList.add('outUp');
-    imprint.classList.remove('inUp');
-    imprint.classList.add('outUp');
-    privacy.classList.remove('inUp');
-    privacy.classList.add('outUp');
-}
-
-function displayImprint() {
-    imprint.classList.toggle('inUp');
-    imprint.classList.toggle('outUp');
-
-    about.classList.remove('inUp');
-    about.classList.add('outUp');
-    work.classList.remove('inUp');
-    work.classList.add('outUp');
     privacy.classList.remove('inUp');
     privacy.classList.add('outUp');
 }
@@ -114,8 +84,6 @@ function displayPrivacy() {
     about.classList.add('outUp');
     work.classList.remove('inUp');
     work.classList.add('outUp');
-    imprint.classList.remove('inUp');
-    imprint.classList.add('outUp');
 }
 
 function hideAbout()  {
@@ -126,11 +94,6 @@ function hideAbout()  {
 function hideWork()  {
     work.classList.remove('inUp');
     work.classList.add('outUp');
-}
-
-function hideImprint()  {
-    imprint.classList.remove('inUp');
-    imprint.classList.add('outUp');
 }
 
 function hidePrivacy()  {
