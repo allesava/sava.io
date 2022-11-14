@@ -1,4 +1,4 @@
-/*! Version 22.11.08d */
+/*! Version 22.11.14a */
 @use "sass:math";
 @import "variables";
 
@@ -8,10 +8,10 @@ html {
 	--c-sticker: hsla(0, 0%, 77%, 0.6);
 	--c-title: hsla(0, 0%, 9%, 1);
 	--c-text: hsla(0, 0%, 29%, 1);
-	--font: -apple-system, system-ui, sans-serif;
+	--font: acumin-pro, -apple-system, system-ui, sans-serif;
 	--font-2: var(--font);
 	--w-reg: 300;
-	--w-bold: 600;
+	--w-bold: 300;
 	--radius: 3px;
 	--border-color: hsl(0, 0%, 100%) hsl(0, 0%, 30%) hsl(0, 0%, 30%) hsl(0, 0%, 100%);
 }
@@ -20,7 +20,7 @@ body {
 	font-family: var(--font);
 	font-weight: var(--w-reg);
 	color: var(--c-text);
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	line-height: 1.5;
 	margin: 0;
 	font-feature-settings: "tnum";
