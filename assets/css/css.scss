@@ -1,11 +1,11 @@
-/*! Version 22.11.14b */
+/*! Version 22.11.14c */
 @use "sass:math";
 @import "variables";
 
 html {
 	font-size: 20px;
 
-	--c-sticker: hsla(0, 0%, 77%, 0.6);
+	--c-sticker: hsla(0, 0%, 77%, 0.4);
 	--c-title: hsla(0, 0%, 9%, 1);
 	--c-text: hsla(0, 0%, 29%, 1);
 	--font: acumin-pro, -apple-system, system-ui, sans-serif;
@@ -404,7 +404,7 @@ ol {
 	}
 }
 
-.wndw {
+section.wndw {
 	border: 1px solid var(--c-title);
 	background: $c-bg-dark;
 
@@ -652,7 +652,6 @@ tooltip {
 	line-height: 1.3;
 	padding: 3px;
 	display: grid;
-	grid-gap: 10px;
 	grid-template-columns: auto auto auto;
 	justify-content: end;
 	align-items: center;
