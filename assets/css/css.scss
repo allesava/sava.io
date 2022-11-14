@@ -1,4 +1,4 @@
-/*! Version 22.11.14a */
+/*! Version 22.11.14b */
 @use "sass:math";
 @import "variables";
 
@@ -404,7 +404,7 @@ ol {
 	}
 }
 
-section.wndw {
+.wndw {
 	border: 1px solid var(--c-title);
 	background: $c-bg-dark;
 
@@ -434,7 +434,7 @@ section.wndw {
 	}
 }
 
-section.wndw-reversed {
+.wndw-reversed {
 	background: var(--c-title);
 	border: 1px solid change-color($c-bg-darkest, $alpha: 0.6);
 	color: $c-bg-darker;
@@ -607,12 +607,12 @@ main {
 tooltip {
 	position: relative;
 	cursor: help;
-	border-bottom: 1px dotted var(--c-title);
+	border-bottom: 1px dotted currentColor;
 
 	&::before,
 	&::after {
 		position: absolute;
-		z-index: 99;
+		z-index: 999;
 		pointer-events: none;
 		transition: all 0.1s ease-in-out;
 		opacity: 0;
@@ -622,10 +622,10 @@ tooltip {
 		content: '';
 		width: 0;
 		height: 0;
-		top: 100%;
+		bottom: calc(100% - 4px);
 		left: calc(50% - 5px);
 		border: 5px solid;
-		border-color: transparent transparent var(--c-title);
+		border-color: currentColor transparent transparent;
 	}
 
 	&::after {
@@ -635,7 +635,7 @@ tooltip {
 		padding: 4px 9px;
 		white-space: nowrap;
 		font-size: 0.6rem;
-		top: calc(100% + 10px);
+		bottom: calc(100% + 6px);
 		left: 0;
 	}
 
@@ -745,11 +745,13 @@ cassette	{
 .cassette {
 	width: calc(100% - 12px);
 	max-width: 460px;
-	height: 300px;
+	height: 280px;
 	padding: 24px 24px 0;
 	border-radius: 10px;
-	background: $c-bg;
-	border: 1px solid $c-bg-darker;
+	background: var(--c-title);
+	border: 1px solid change-color($c-bg-darkest, $alpha: 0.6);
+	box-shadow: 5px -5px 9px hsla(0, 0%, 0%, 0.2);
+	color: $c-bg-darker;
 	position: absolute;
 	top: -20px;
 	right: -$gap;
@@ -760,7 +762,6 @@ cassette	{
 	grid-template-rows: auto 22%;
 	grid-row-gap: 20px;
 	z-index: 9;
-	box-shadow: 5px -5px 9px hsla(0, 0%, 0%, 0.2);
 
 	#logo {
 		position: absolute;
@@ -804,13 +805,14 @@ cassette	{
 		#mix {
 			background-image: repeating-linear-gradient(to top, $c-bg-darkest 3px, $c-bg-darkest 4px, $c-bg-darker 4px, $c-bg-darker 27px);
 			font-size: 1rem;
-			line-height: 28px;
+			line-height: 24px;
 			text-align: center;
 			margin: 0 16px;
 			display: flex;
 			justify-content: center;
 			align-items: flex-end;
 			-webkit-backface-visibility: hidden;
+			color: var(--c-title);
 		}
 
 		.reels {
@@ -885,12 +887,12 @@ cassette	{
 
 					&:first-of-type {
 						left: -70%;
-						box-shadow: 0 0 0 70px var(--c-text), 0 0 0 72px var(--c-title);
+						box-shadow: 0 0 0 70px var(--c-title), 0 0 0 72px var(--c-title);
 					}
 
 					&:last-of-type {
 						right: -80%;
-						box-shadow: 0 0 0 7px var(--c-text), 0 0 0 9px var(--c-title);
+						box-shadow: 0 0 0 7px var(--c-title), 0 0 0 9px var(--c-title);
 					}
 				}
 			}
@@ -910,8 +912,9 @@ cassette	{
 			width: 70%;
 			height: 100%;
 			position: absolute;
-			background: $c-bg;
-			border: solid var(--c-title);
+			border: 1px solid change-color($c-bg-darkest, $alpha: 0.6);
+			box-shadow: 5px -5px 9px hsla(0, 0%, 0%, 0.2);
+			background: var(--c-title);
 		}
 
 		&::before {
@@ -934,9 +937,10 @@ cassette	{
 			height: 12px;
 			position: absolute;
 			border: 1px solid var(--c-text);
-			box-shadow: inset -1px -1px 0 $c-bg-darkest;
+			box-shadow: inset -1px -1px 0 var(--c-text);
 			z-index: 3;
 			border-radius: 50%;
+			background: var(--c-title);
 
 			&:nth-child(1) {
 				bottom: 12px;
@@ -968,7 +972,6 @@ cassette	{
 	position: absolute;
 	top: 120px;
 	left: -30px;
-	transform: rotate(1deg);
 	width: calc(100% - 12px);
 	max-width: 460px;
 	height: 280px;
@@ -976,8 +979,8 @@ cassette	{
 	outline-offset: -6px;
 	background-image: repeating-linear-gradient(
 					$c-bg 0, $c-bg 20px,
-					$c-bg-darker 20px,
-					$c-bg-darker 20px,
+					$c-bg-darkest 20px,
+					$c-bg-darkest 20px,
 					$c-bg 21px, $c-bg 30px
 	);
 	box-shadow: 10px -5px 9px hsla(0, 0%, 0%, 0.2);
@@ -987,13 +990,15 @@ cassette	{
 	padding: 14px 14px 14px;
 	justify-self: end;
 	z-index: 12;
-	-webkit-backface-visibility: hidden;
+	color: var(--c-title);
+	//transform: rotate(1deg);
+	//-webkit-backface-visibility: hidden;
 
 	&::after {
 		content: '';
 		width: 100%;
 		height: 48px;
-		background: $c-bg;
+		background: $c-bg-dark;
 		display: block;
 		position: absolute;
 		top: 0;
