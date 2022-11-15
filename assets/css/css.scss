@@ -1,4 +1,4 @@
-/*! Version 22.11.14c */
+/*! Version 22.11.15a */
 @use "sass:math";
 @import "variables";
 
@@ -54,22 +54,23 @@ a {
 	transition: all 0.2s ease-in-out;
 	background: linear-gradient(to top, $c-bg-darkest 1px, transparent 1px);
 
-	//&.external {
-	//	&::after {
-	//		content: "";
-	//		//content: "\2197";
-	//		//content: ' ➚';
-	//		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M12,0V5.333H10.667V2.666H9.334V1.333H6.667V0H12ZM9.334,8v2.666h1.333v-4H9.334ZM8,4H9.334V2.666H8ZM6.667,10.667H1.333V12h8V10.667H6.667Zm0-5.334H8V4H6.667ZM5.333,6.667H6.667V5.333H5.333ZM4,2.666H5.333V1.333h-4V2.666H4ZM1.333,8V2.666H0v8H1.333V8Z'/%3E%3C/svg%3E");
-	//		background-size: 12px 12px;
-	//		background-repeat: no-repeat;
-	//		display: inline-block;
-	//		margin-left: 0.4rem;
-	//		font-size: 0.8em;
-	//		opacity: 0.5;
-	//		width: 12px;
-	//		height: 12px;
-	//	}
-	//}
+	&.external {
+		&::after {
+			content: "";
+			//content: "\2197";
+			//content: ' ➚';
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M12,0V5.333H10.667V2.666H9.334V1.333H6.667V0H12ZM9.334,8v2.666h1.333v-4H9.334ZM8,4H9.334V2.666H8ZM6.667,10.667H1.333V12h8V10.667H6.667Zm0-5.334H8V4H6.667ZM5.333,6.667H6.667V5.333H5.333ZM4,2.666H5.333V1.333h-4V2.666H4ZM1.333,8V2.666H0v8H1.333V8Z'/%3E%3C/svg%3E");
+			background-size: 12px 12px;
+			background-repeat: no-repeat;
+			display: inline-block;
+			margin: 0 0 0 0.2rem;
+			font-size: 0.8em;
+			opacity: 0.5;
+			width: 12px;
+			height: 12px;
+			filter: invert(1);
+		}
+	}
 }
 
 h1, h2, h3, h4 {
@@ -353,7 +354,7 @@ ol {
 	outline: 1px solid hsla(0, 0%, 0%, 0.3);
 	outline-offset: -3px;
 	border-radius: var(--radius);
-	padding: 50px 20px 20px;
+	padding: 42px 24px 20px;
 
 	&::before {
 		content: '';
@@ -398,7 +399,6 @@ ol {
 	}
 
 	.inner {
-		padding: math.div($gap, 4);
 		overflow-y: auto;
 		max-height: calc(100vh - 240px);
 	}
@@ -409,6 +409,7 @@ section.wndw {
 	background: $c-bg-dark;
 
 	.inner {
+		padding: math.div($gap, 4);
 		outline: 1px solid $c-bg;
 		border: 1px solid;
 		background: $c-bg;
@@ -752,9 +753,9 @@ cassette	{
 	box-shadow: 5px -5px 9px hsla(0, 0%, 0%, 0.2);
 	color: $c-bg-darker;
 	position: absolute;
-	top: -20px;
-	right: -$gap;
-	transform: rotate(-2deg);
+	top: 10px;
+	left: 10px;
+	transform: rotate(2deg);
 	justify-self: start;
 	display: grid;
 	grid-template-columns: repeat(1, auto);
@@ -811,6 +812,7 @@ cassette	{
 			justify-content: center;
 			align-items: flex-end;
 			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
 			color: var(--c-title);
 		}
 
@@ -935,7 +937,7 @@ cassette	{
 			width: 12px;
 			height: 12px;
 			position: absolute;
-			border: 1px solid var(--c-text);
+			//border: 1px solid var(--c-text);
 			box-shadow: inset -1px -1px 0 var(--c-text);
 			z-index: 3;
 			border-radius: 50%;
@@ -969,11 +971,11 @@ cassette	{
 .cassetteCase {
 	display: grid;
 	position: absolute;
-	top: 120px;
-	left: -30px;
+	top: 140px;
+	right: 10px;
 	width: calc(100% - 12px);
 	max-width: 460px;
-	height: 280px;
+	height: 240px;
 	outline: 6px solid $c-bg;
 	outline-offset: -6px;
 	background-image: repeating-linear-gradient(

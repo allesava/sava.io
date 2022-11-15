@@ -1,4 +1,4 @@
-/*! Version 22.11.14c */
+/*! Version 22.11.15a */
 
 let about = document.getElementById('about');
 let linkAbout = document.getElementById('linkAbout');
