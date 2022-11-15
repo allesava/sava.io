@@ -1,4 +1,4 @@
-/*! Version 22.11.15a */
+/*! Version 22.11.15b */
 @use "sass:math";
 @import "variables";
 
@@ -631,7 +631,8 @@ tooltip {
 
 	&::after {
 		content: attr(aria-label);
-		@extend .wndw;
+		border: 1px solid var(--c-title);
+		background: $c-bg-dark;
 		color: var(--c-title);
 		padding: 4px 9px;
 		white-space: nowrap;
