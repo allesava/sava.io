@@ -1,0 +1,43 @@
+// Typography
+$font: 'lunchtype22', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", Arial, sans-serif;
+$font-title: 'maitree', $font;
+$font-size: 18px;
+$line-height: 1.5;
+
+// Spacing
+$gap: 2rem;
+
+// Grid
+$col-nr: 5;
+
+// Colors
+$c-main: hsl(204, 100%, 37%);
+$c-title: hsla(208, 9%, 19%, 1);
+$c-text: hsla(208, 9%, 33%, 1);
+$c-border: hsla(0, 0%, 20%, 0.2);
+
+// Background colors
+$c-bg: hsla(0, 0%, 100%, 1);
+$c-bg-mid: hsla(208, 19%, 16%, 1);
+$c-bg-dark: hsla(208, 22%, 13%, 1);
+hsla(151, 87%, 62%, 1.00)
+// Border-radius
+%radius {
+    border-radius: 3px;
+}
+
+%round {
+    border-radius: 50%;
+}
+
+// RWD Breakpoints
+$breakpoint-desktop: 1200px;
+$breakpoint-tablet: 1199px;
+$breakpoint-mobile: 860px;
+$breakpoint-small: 480px;
+
+// Extensions
+%shadow {
+    box-shadow: 0 2px 3px change-color($c-main, $alpha: 0.15), 0 0 0 1px change-color($c-main, $alpha: 0.15);
+}
