@@ -1,4 +1,4 @@
-/*! Version 22.11.15b */
+/*! Version 23.01.02a */
 @use "sass:math";
 @import "variables";
 
@@ -68,7 +68,7 @@ a {
 			opacity: 0.5;
 			width: 12px;
 			height: 12px;
-			filter: invert(1);
+			//filter: invert(1);
 		}
 	}
 }
@@ -449,6 +449,10 @@ section.wndw {
 		color: $c-bg-darker;
 		opacity: 0.8;
 		background: var(--c-title);
+	}
+
+	a.external::after	{
+		filter: invert(1);
 	}
 
 	[id^=close] {
